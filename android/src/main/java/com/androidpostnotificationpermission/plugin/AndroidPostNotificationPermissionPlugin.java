@@ -16,19 +16,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 @CapacitorPlugin(
-    name = "AndroidPostNotificationsPermission",
+    name = "AndroidPostNotificationPermission",
     permissions = {
         @Permission(
             strings = { Manifest.permission.POST_NOTIFICATIONS },
-            alias = AndroidPostNotificationsPermissionPlugin.POST_NOTIFICATIONS
+            alias = AndroidPostNotificationPermissionPlugin.POST_NOTIFICATIONS
         )
     }
 )
-public class AndroidPostNotificationsPermissionPlugin extends Plugin {
+public class AndroidPostNotificationPermissionPlugin extends Plugin {
 
-    private static final String TAG = "AndroidPostNotificationsPermissionPlugin";
+    private static final String TAG = "AndroidPostNotificationPermissionPlugin";
     static final String POST_NOTIFICATIONS = "postNotifications";
-    private AndroidPostNotificationsPermission implementation = new AndroidPostNotificationsPermission();
+    private AndroidPostNotificationPermission implementation = new AndroidPostNotificationPermission();
 
     @PluginMethod
     public void echo(PluginCall call) {
