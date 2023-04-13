@@ -1,11 +1,13 @@
-# android-post-notification-permission
+# capacitor-plugin-android-post-notifications-permission
 
-workaround for android post notification permission until capacitor v5 is launched
+Published npm version of the capacitor plugin <a href="https://github.com/hermitdemschoenenleben/capacitor-plugin-android-post-notifications-permission">created by hermitdemschoenenleben</a>
+Used for acquiring POST_NOTIFICATIONS permission on android >= 13.
+This is a workaround until https://github.com/ionic-team/capacitor-plugins/issues/1135 is fixed.
 
 ## Install
 
 ```bash
-npm install android-post-notification-permission
+npm install capacitor-plugin-android-post-notifications-permission
 npx cap sync
 ```
 
@@ -14,6 +16,10 @@ npx cap sync
 <docgen-index>
 
 * [`echo(...)`](#echo)
+* [`checkPermissions()`](#checkpermissions)
+* [`requestPermissions(...)`](#requestpermissions)
+* [Interfaces](#interfaces)
+* [Type Aliases](#type-aliases)
 
 </docgen-index>
 
@@ -33,5 +39,61 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
 
 --------------------
+
+
+### checkPermissions()
+
+```typescript
+checkPermissions() => Promise<PermissionStatus>
+```
+
+**Returns:** <code>Promise&lt;<a href="#permissionstatus">PermissionStatus</a>&gt;</code>
+
+--------------------
+
+
+### requestPermissions(...)
+
+```typescript
+requestPermissions(permissions?: AndroidNotificationPermissionPluginPermissions | undefined) => Promise<PermissionStatus>
+```
+
+| Param             | Type                                                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **`permissions`** | <code><a href="#androidnotificationpermissionpluginpermissions">AndroidNotificationPermissionPluginPermissions</a></code> |
+
+**Returns:** <code>Promise&lt;<a href="#permissionstatus">PermissionStatus</a>&gt;</code>
+
+--------------------
+
+
+### Interfaces
+
+
+#### PermissionStatus
+
+| Prop                    | Type                                                        |
+| ----------------------- | ----------------------------------------------------------- |
+| **`postNotifications`** | <code><a href="#permissionstate">PermissionState</a></code> |
+
+
+#### AndroidNotificationPermissionPluginPermissions
+
+| Prop              | Type                               |
+| ----------------- | ---------------------------------- |
+| **`permissions`** | <code>'postNotifications'[]</code> |
+
+
+### Type Aliases
+
+
+#### PermissionState
+
+<code>'prompt' | 'prompt-with-rationale' | 'granted' | 'denied'</code>
+
+
+#### AndroidNotificationPermissionType
+
+<code>'postNotifications'</code>
 
 </docgen-api>

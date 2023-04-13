@@ -9,9 +9,7 @@
   "files": [
     "android/src/main/",
     "android/build.gradle",
-    "dist/",
-    "ios/Plugin/",
-    "AndroidPostNotificationPermission.podspec"
+    "dist/"
   ],
   "author": "@robertmadril @hermitdemschoenenleben",
   "license": "MIT",
