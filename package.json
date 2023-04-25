@@ -1,6 +1,6 @@
 {
   "name": "android-post-notification-permission",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "workaround for android post notification permission until capacitor v5 is launched",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
